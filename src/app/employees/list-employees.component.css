@@ -6,3 +6,8 @@
 .grey{
   background-color: rgb(19, 212, 247);
 }
+
+.vertical-align{
+  display: flex;
+  align-items: center;
+}
