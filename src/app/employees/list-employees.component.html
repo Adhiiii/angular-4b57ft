@@ -1,6 +1,6 @@
-<div class="panel panel-primary" *ngfor="let employee of employees">
+<div class="panel panel-primary" *ngFor="let employee of employees">
   <div class="panel-heading">
-    <h3 class="panel-title">{{emplyee.name}}</h3>
+    <h3 class="panel-title">{{employee.name}}</h3>
   </div>
   <div class="panel-body">
     <div class="co-xs-10">
@@ -15,7 +15,7 @@
                 Gender
               </div>
               <div class="col-xs-6">
-                : {{emplyee.gender}}
+                : {{employee.gender}}
               </div>
             </div>
             <div class="row">
@@ -23,7 +23,7 @@
                 Contact Preference
               </div>
               <div class="col-xs-6">
-                : {{emplyee.contactPreference}}
+                : {{employee.contactPreference}}
               </div>
             </div>
             <div class="row">
@@ -31,7 +31,7 @@
                 Phone Number
               </div>
               <div class="col-xs-6">
-                : {{emplyee.phoneNumber}}
+                : {{employee.phoneNumber}}
               </div>
             </div>
             <div class="row">
@@ -39,7 +39,7 @@
                 Date Of Birth
               </div>
               <div class="col-xs-6">
-                : {{emplyee.dateOfBirth | date}}
+                : {{employee.dateOfBirth | date}}
               </div>
             </div>
             <div class="row">
@@ -47,7 +47,7 @@
                 Department
               </div>
               <div class="col-xs-6">
-                : {{emplyee.department}}
+                : {{employee.department}}
               </div>
             </div>
             <div class="row">
@@ -55,7 +55,7 @@
                 IsActive
               </div>
               <div class="col-xs-6">
-                : {{emplyee.isActive}}
+                : {{employee.isActive}}
               </div>
             </div>
           </div>
