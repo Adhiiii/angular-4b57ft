@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component ({
  
-  templateUrl: './list-employees.component.html',
-  styleUrls: ['./list-employees.component.css']
+  templateUrl: './create-employee.component.html',
+  styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeesComponent implements OnInit {
 
