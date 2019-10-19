@@ -11,6 +11,7 @@ export class CreateEmployeesComponent implements OnInit {
   gender = 'male';
   cntctpref = 'email';
   isactive = true;
+  department = '0';
   constructor() { }
 
   ngOnInit() { }
