@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Department } from './app/models/department.model';
+
 
 @Component ({
  
