@@ -47,10 +47,14 @@
       <div class="form-group">
         <div class="form-control"> 
           <label>
-            <input type="checkbox" value="true" name="isactive" [(ngModel)]="isactive">
+            <input type="checkbox" name="isactive" [(ngModel)]="isactive">
             Is Active    
           </label>            
         </div>
+      </div>
+      <div class="form-group">
+        <label for="department" >Department</label>
+        <input id="department" name="department" [(ngModel)]="department" class="form-control">
       </div>
       
     </div>
