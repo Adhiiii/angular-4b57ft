@@ -15,19 +15,44 @@
         <input id="email" name="emailId" [(ngModel)]="email" type="text" class="form-control">
       </div>
       <div class="form-group">
+        <label for="phnumber">Phone Number</label>
+        <input id="phnumber" name="phNumber" [(ngModel)]="phnumber" type="number" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Contact Preference</label>
+        <div class="form-control"> 
+          <label class="radio-inline">
+            <input type="radio" value="email" name="cntctpref" [(ngModel)]="cntctpref">
+            Email    
+          </label>
+          <label class="radio-inline">
+            <input type="radio" value="phnumber" name="cntctpref" [(ngModel)]="cntctpref">
+            Phone Number
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
         <label>Gender</label>
         <div class="form-control"> 
           <label class="radio-inline">
-            <input type="radio" value="male>
-            Male
+            <input type="radio" value="male" name="gender" [(ngModel)]="gender">
+            Male    
           </label>
-          <label class="radio-inline>
-            <input type="radio" value="female>
+          <label class="radio-inline">
+            <input type="radio" value="female" name="gender" [(ngModel)]="gender">
             Female
           </label>
         </div>
-
       </div>
+      <div class="form-group">
+        <div class="form-control"> 
+          <label>
+            <input type="checkbox" value="true" name="isactive" [(ngModel)]="isactive">
+            Is Active    
+          </label>            
+        </div>
+      </div>
+      
     </div>
 
     <div class="panel-footer" >
