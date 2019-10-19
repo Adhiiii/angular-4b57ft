@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ListEmployeesComponent } from './employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employee.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
@@ -14,7 +15,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoutes) ],
+  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(appRoutes), BsDatepickerModule.forRoot() ],
   declarations: [ AppComponent, ListEmployeesComponent, CreateEmployeesComponent ],
   bootstrap:    [ AppComponent ]
 })
