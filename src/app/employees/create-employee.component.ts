@@ -10,7 +10,7 @@ import { BsDatepickerConfig } from 'ngx-bootstarp/datepicker';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeesComponent implements OnInit {
-  datepickerConfig: Partial<BsDatepickerConfig>
+  datePickerConfig: Partial<BsDatepickerConfig>
   departments: Department[]  = [
     {
       id: 0,
@@ -41,7 +41,7 @@ export class CreateEmployeesComponent implements OnInit {
   dateOfBirth = new Date(25, 7, 2019);
 
   constructor() { 
-    this.datepickerConfig = Object.assign({},
+    this.datePickerConfig = Object.assign({},
     {containerClass: 'theme-dark-blue'})
   }
 
