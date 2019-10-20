@@ -33,7 +33,7 @@ export class CreateEmployeesComponent implements OnInit {
   ]
 
   department = 0;
-  isactive = true;
+  isactive = false;
   gender = 'male';
   cntctpref = 'phnumber';
 
