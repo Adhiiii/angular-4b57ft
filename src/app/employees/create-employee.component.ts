@@ -50,6 +50,10 @@ export class CreateEmployeesComponent implements OnInit {
     })
   }
 
+  togglephotoPreview(){
+    this.photoPreview = !this.photoPreview;
+  }
+
   ngOnInit() { }
 
   saveEmployee(empForm: NgForm):void {

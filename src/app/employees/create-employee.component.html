@@ -74,8 +74,8 @@
         <img [src] ="photoPath" height="200" width="200" *ngIf="photoPreview" />
       </div>
       <div class="form-group" >
-      <button type="submit" class="btn btn-primary">Photo Preview</button>
-    </div>
+        <button (click)="togglephotoPreview()" class="btn btn-primary">Preview Photo</button>
+      </div>
 
     </div>
 
