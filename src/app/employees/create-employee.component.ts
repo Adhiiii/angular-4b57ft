@@ -40,7 +40,10 @@ export class CreateEmployeesComponent implements OnInit {
   cntctpref = 'phnumber';
   dateOfBirth = new Date(25, 7, 2019);
 
-  constructor() { }
+  constructor() { 
+    this.datepickerConfig = Object.assign({},
+    {containerClass: 'theme-dark-blue'})
+  }
 
   ngOnInit() { }
 
