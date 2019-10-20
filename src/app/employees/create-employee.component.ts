@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Department } from './app/models/department.model';
+import { BsDatepickerConfig } from 'ngx-bootstarp/datepicker';
 
 
 @Component ({
@@ -9,6 +10,7 @@ import { Department } from './app/models/department.model';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeesComponent implements OnInit {
+  datepickerConfig: Partial<BsDatepickerConfig>
   departments: Department[]  = [
     {
       id: 0,
@@ -36,6 +38,7 @@ export class CreateEmployeesComponent implements OnInit {
   isactive = false;
   gender = 'male';
   cntctpref = 'phnumber';
+  dateOfBirth = new Date(25, 7, 2019);
 
   constructor() { }
 
