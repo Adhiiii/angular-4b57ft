@@ -38,13 +38,14 @@ export class CreateEmployeesComponent implements OnInit {
   isactive = false;
   gender = 'male';
   cntctpref = 'phnumber';
-  dateOfBirth = new Date(25, 7, 2019);
+  dateOfBirth = new Date(2019, 9, 21);
 
   constructor() { 
     this.datePickerConfig = Object.assign({},
     {containerClass: 'theme-dark-blue',
     showWeekNumbers: false,
-    maxDate: new Date(2019, 9, 15)
+    maxDate: new Date(2019, 9, 25),
+    dateInputFormat: 'DD,MMM,YYYY',
     })
   }
 
