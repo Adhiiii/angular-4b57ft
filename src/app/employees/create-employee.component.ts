@@ -39,6 +39,7 @@ export class CreateEmployeesComponent implements OnInit {
   gender = 'male';
   cntctpref = 'phnumber';
   dateOfBirth = new Date(2019, 9, 21);
+  photoPreview = false;
 
   constructor() { 
     this.datePickerConfig = Object.assign({},
