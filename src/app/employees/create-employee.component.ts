@@ -42,7 +42,10 @@ export class CreateEmployeesComponent implements OnInit {
 
   constructor() { 
     this.datePickerConfig = Object.assign({},
-    {containerClass: 'theme-dark-blue'})
+    {containerClass: 'theme-dark-blue',
+    showWeekNumbers: false,
+    maxDate: new Date(2019, 9, 15)
+    })
   }
 
   ngOnInit() { }
