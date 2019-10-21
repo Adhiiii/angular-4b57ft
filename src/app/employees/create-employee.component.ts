@@ -12,6 +12,18 @@ import { Employee } from './app/models/employee.model';
 })
 export class CreateEmployeesComponent implements OnInit {
   datePickerConfig: Partial<BsDatepickerConfig>;
+  employee : Employee= {
+    id: null,
+    name: null,
+    gender: null,
+    contactPreference: null,
+    phoneNumber: null,
+    email: null,
+    dateOfBirth: null,
+    department: null,
+    isactive: null,
+    photoPath: null
+  };
   
   departments: Department[]  = [
     {
