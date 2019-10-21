@@ -15,16 +15,16 @@ export class CreateEmployeesComponent implements OnInit {
   employee : Employee= {
     id: null,
     name: null,
-    gender: null,
-    contactPreference: null,
+    gender: 'male',
+    contactPreference: 'email',
     phoneNumber: null,
     email: null,
     dateOfBirth: null,
-    department: null,
-    isactive: null,
+    department: 0,
+    isactive: true,
     photoPath: null
   };
-  
+
   departments: Department[]  = [
     {
       id: 0,
