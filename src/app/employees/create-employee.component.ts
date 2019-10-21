@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Department } from './app/models/department.model';
 import { BsDatepickerConfig } from 'ngx-bootstarp/datepicker';
+import { Employee } from './app/models/employee.model';
 
 
 @Component ({
@@ -10,7 +11,8 @@ import { BsDatepickerConfig } from 'ngx-bootstarp/datepicker';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeesComponent implements OnInit {
-  datePickerConfig: Partial<BsDatepickerConfig>
+  datePickerConfig: Partial<BsDatepickerConfig>;
+  
   departments: Department[]  = [
     {
       id: 0,
@@ -31,6 +33,10 @@ export class CreateEmployeesComponent implements OnInit {
     {
       id: 4,
       name: 'Payroll'
+    },
+    {
+      id: 5,
+      name: 'Finance'
     }
   ]
 
