@@ -35,9 +35,9 @@ export class CreateEmployeesComponent implements OnInit {
   ]
 
   department = 0;
-  isactive = false;
+  isactive = true;
   gender = 'male';
-  cntctpref = 'phnumber';
+  cntctpref = 'email';
   dateOfBirth = new Date(2019, 9, 21);
   photoPreview = false;
 

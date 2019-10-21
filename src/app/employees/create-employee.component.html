@@ -6,20 +6,26 @@
     </div>
 
     <div class="panel-body">
-      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
+      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched" [class.has-success]="fullNameControl.valid" >
         <label for="fullname" class="control-label" >Full Name</label>
-        <input required id="fullname" name="fullName" [(ngModel)]="fullname" type="text" class="form-control" #fullNameControl="ngModel">
-        <span class="help-block" *ngIf="fullNameControl.invalid && fullNameControl.touched">
-          Full Name is Required
+        <input required minlength="4" id="fullname" name="fullName" [(ngModel)]="fullName" type="text" class="form-control" #fullNameControl="ngModel">
+        <span class="help-block" *ngIf="fullNameControl.invalid && fullNameControl.touched || fullNameControl.invalid &&fullNameControl.errors.minlength">
+          {{fullNameControl.errors.minlength? "Minimum 4 Characters":"Full Name"}} is Required
         </span>
       </div>
-      <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
-        <label for="email">Email</label>
-        <input id="email" name="emailId" [(ngModel)]="email" type="text" class="form-control" >
+      <div class="form-group" [class.has-error]="emailControl.invalid && emailControl.touched" [class.has-success]="emailControl.valid">
+        <label for="email" class="control-label" >Email</label>
+        <input required id="email" name="emailId" [(ngModel)]="email" type="text" class="form-control" #emailControl="ngModel">
+        <span class="help-block" *ngIf="emailControl.invalid && emailControl.touched">
+          Enter valid mailId
+        </span>      
       </div>
-      <div class="form-group">
-        <label for="phnumber">Phone Number</label>
-        <input id="phnumber" name="phNumber" [(ngModel)]="phnumber" type="number" class="form-control">
+      <div class="form-group" [class.has-error]="phoneControl.invalid && phoneControl.touched" [class.has-success]="phoneControl.valid" >
+        <label for="phnumber" class="control-label">Phone Number</label>
+        <input required minlength="7" id="phnumber" name="phNumber" [(ngModel)]="phNumber" type="text" class="form-control" #phoneControl="ngModel">
+        <span class="help-block" *ngIf="phoneControl.invalid && phoneControl.touched || phoneControl.invalid && phoneControl.errors.minlength">
+          {{phoneControl.errors.minlength? "Minimum 7 digits":"Phone Number"}} is Required
+        </span>
       </div>
       <div class="form-group">
         <label>Contact Preference</label>
@@ -83,7 +89,7 @@
     </div>
 
     <div class="panel-footer" >
-      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
     </div>
 
   </div>
