@@ -40,6 +40,7 @@ export class CreateEmployeesComponent implements OnInit {
   cntctpref = 'email';
   dateOfBirth = new Date(2019, 9, 21);
   photoPreview = false;
+  deptSelected = false;
 
   constructor() { 
     this.datePickerConfig = Object.assign({},
@@ -53,6 +54,17 @@ export class CreateEmployeesComponent implements OnInit {
   togglephotoPreview(){
     this.photoPreview = !this.photoPreview;
   }
+
+  onOptionsSelected(value:string){
+     //console.log("the selected value is " + value);
+     if(value == '0'){
+       this.deptSelected= false;
+     }
+     else {
+       this.deptSelected= true;
+     }
+
+}
 
   ngOnInit() { }
 
