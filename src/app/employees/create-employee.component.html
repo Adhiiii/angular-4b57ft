@@ -24,7 +24,7 @@
         <label for="phnumber" class="control-label">Phone Number</label>
         <input required minlength="10" id="phnumber" name="phNumber" [(ngModel)]="phNumber" type="text" class="form-control" #phoneControl="ngModel">
         <span class="help-block" *ngIf="phoneControl.invalid && phoneControl.touched || phoneControl.invalid && phoneControl.errors.minlength">
-          {{phoneControl.errors.minlength? "Minimum 7 digits":"Phone Number"}} is Required
+          {{phoneControl.errors.minlength? "Minimum 10 digits":"Phone Number"}} is Required
         </span>
       </div>
       <div class="form-group">
