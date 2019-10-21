@@ -55,7 +55,7 @@ export class CreateEmployeesComponent implements OnInit {
     this.photoPreview = !this.photoPreview;
   }
 
-  onOptionsSelected(value:string){
+  onDepartmentSelected(value:string){
      //console.log("the selected value is " + value);
      if(value == '0'){
        this.deptSelected= false;

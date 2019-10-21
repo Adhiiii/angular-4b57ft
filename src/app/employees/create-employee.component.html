@@ -63,7 +63,7 @@
       </div>
       <div class="form-group" [class.has-error]="!deptSelected && deptControl.touched" [class.has-success]="deptSelected" >
         <label for="department" class="control-label" >Department</label>
-        <select required id="department" name="department" [(ngModel)]="department" class="form-control" #deptControl="ngModel" (change)='onOptionsSelected(deptControl.value)'>
+        <select required id="department" name="department" [(ngModel)]="department" class="form-control" #deptControl="ngModel" (change)='onDepartmentSelected(deptControl.value)'>
           <option *ngFor="let dept of departments" [value]="dept.id">
             {{dept.name}}
           </option>
