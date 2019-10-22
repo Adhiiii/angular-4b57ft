@@ -52,18 +52,12 @@ export class CreateEmployeesComponent implements OnInit {
     }
   ]
 
-  department = 0;
-  isactive = true;
-  gender = 'male';
-  cntctpref = 'email';
-  dateOfBirth = new Date(2019, 9, 21);
   photoPreview = false;
   deptSelected = false;
 
   constructor() { 
     this.datePickerConfig = Object.assign({},
     {containerClass: 'theme-dark-blue',
-    showWeekNumbers: false,
     maxDate: new Date(2019, 9, 25),
     dateInputFormat: 'DD,MMM,YYYY',
     })

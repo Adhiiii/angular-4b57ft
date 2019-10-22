@@ -13,18 +13,18 @@
           {{name.errors.minlength? "Minimum 4 Characters":"Full Name"}} is Required
         </span>
       </div>
-      <div class="form-group" [class.has-error]="emailControl.invalid && emailControl.touched" [class.has-success]="emailControl.valid">
+      <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid">
         <label for="email" class="control-label" >Email</label>
-        <input required id="email" name="emailId" [(ngModel)]="employee.email" type="text" class="form-control" #emailControl="ngModel">
-        <span class="help-block" *ngIf="emailControl.invalid && emailControl.touched">
-          Enter valid mailId
+        <input required id="email" name="emailId" [(ngModel)]="employee.email" type="text" class="form-control" #email="ngModel">
+        <span class="help-block" *ngIf="email.invalid && email.touched">
+          Enter is {{name.errors.minlength? "Required":"Invalid"}}
         </span>      
       </div>
-      <div class="form-group" [class.has-error]="phoneControl.invalid && phoneControl.touched" [class.has-success]="phoneControl.valid" >
+      <div class="form-group" [class.has-error]="phone.invalid && phone.touched" [class.has-success]="phone.valid" >
         <label for="phnumber" class="control-label">Phone Number</label>
-        <input required minlength="10" id="phnumber" name="phNumber" [(ngModel)]="employee.phoneNumber" type="text" class="form-control" #phoneControl="ngModel">
-        <span class="help-block" *ngIf="phoneControl.invalid && phoneControl.touched || phoneControl.invalid && phoneControl.errors.minlength">
-          {{phoneControl.errors.minlength? "Minimum 10 digits":"Phone Number"}} is Required
+        <input required minlength="10" id="phnumber" name="phNumber" [(ngModel)]="employee.phoneNumber" type="text" class="form-control" #phone="ngModel">
+        <span class="help-block" *ngIf="phone.invalid && phone.touched || phone.invalid && phone.errors.minlength">
+          {{phone.errors.minlength? "Minimum 10 digits":"Phone Number"}} is Required
         </span>
       </div>
       <div class="form-group">
@@ -61,14 +61,14 @@
           </label>            
         </div>
       </div>
-      <div class="form-group" [class.has-error]="!deptSelected && deptControl.touched" [class.has-success]="deptSelected" >
+      <div class="form-group" [class.has-error]="!deptSelected && dept.touched" [class.has-success]="deptSelected" >
         <label for="department" class="control-label" >Department</label>
-        <select required id="department" name="department" [(ngModel)]="employee.department" class="form-control" #deptControl="ngModel" (change)='onDepartmentSelected(deptControl.value)'>
+        <select required id="department" name="department" [(ngModel)]="employee.department" class="form-control" #dept="ngModel" (change)='onDepartmentSelected(dept.value)'>
           <option *ngFor="let dept of departments" [value]="dept.id">
             {{dept.name}}
           </option>
         </select>
-        <span class="help-block" *ngIf="!deptSelected && deptControl.touched">
+        <span class="help-block" *ngIf="!deptSelected && dept.touched">
           Select Department {{deptChange}}
         </span>
       </div>
