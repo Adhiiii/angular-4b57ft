@@ -1,86 +1,86 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Department } from './app/models/department.model';
-import { BsDatepickerConfig } from 'ngx-bootstarp/datepicker';
-import { Employee } from './app/models/employee.model';
+import { Component, OnInit } from "@angular/core";
+import { NgForm } from "@angular/forms";
+import { Department } from "./app/models/department.model";
+import { BsDatepickerConfig } from "ngx-bootstarp/datepicker";
+import { Employee } from "./app/models/employee.model";
 
-
-@Component ({
- 
-  templateUrl: './create-employee.component.html',
-  styleUrls: ['./create-employee.component.css']
+@Component({
+  templateUrl: "./create-employee.component.html",
+  styleUrls: ["./create-employee.component.css"]
 })
 export class CreateEmployeesComponent implements OnInit {
   datePickerConfig: Partial<BsDatepickerConfig>;
-  employee : Employee= {
+  employee: Employee = {
     id: null,
     name: null,
-    gender: 'male',
-    contactPreference: 'email',
+    gender: "male",
+    contactPreference: "email",
     phoneNumber: null,
     email: null,
     dateOfBirth: null,
-    department: 0,
+    department: '-1',
     isactive: true,
     photoPath: null
   };
 
-  departments: Department[]  = [
-    {
+  departments: Department[] = [
+    /* {
       id: 0,
-      name: 'Select Department'
-    },
+      name: "Select Department"
+    }, */
     {
       id: 1,
-      name: 'Help Desk'
+      name: "Help Desk"
     },
     {
       id: 2,
-      name: 'HR'
+      name: "HR"
     },
     {
       id: 3,
-      name: 'IT'
+      name: "IT"
     },
     {
       id: 4,
-      name: 'Payroll'
+      name: "Payroll"
     },
     {
       id: 5,
-      name: 'Finance'
+      name: "Finance"
     }
-  ]
+  ];
 
   photoPreview = false;
-  deptSelected = false;
+  //deptSelected = false;
 
-  constructor() { 
-    this.datePickerConfig = Object.assign({},
-    {containerClass: 'theme-dark-blue',
-    maxDate: new Date(2019, 9, 25),
-    dateInputFormat: 'DD,MMM,YYYY',
-    })
+  constructor() {
+    this.datePickerConfig = Object.assign(
+      {},
+      {
+        containerClass: "theme-dark-blue",
+        maxDate: new Date(2019, 9, 25),
+        dateInputFormat: "DD,MMM,YYYY"
+      }
+    );
   }
 
-  togglephotoPreview(){
+  togglephotoPreview() {
     this.photoPreview = !this.photoPreview;
   }
 
-  onDepartmentSelected(value:string){
-     //console.log("the selected value is " + value);
-     if(value == '0'){
-       this.deptSelected= false;
-     }
-     else {
-       this.deptSelected= true;
-     }
+  /* onDepartmentSelected(value: string) {
+    //console.log("the selected value is " + value);
+    if (value == '0') {
+      this.deptSelected = false;
+    }
+    else {
+      this.deptSelected = true;
+    }
+  } */
 
-}
+  ngOnInit() {}
 
-  ngOnInit() { }
-
-  saveEmployee(empForm: NgForm):void {
+  saveEmployee(empForm: NgForm): void {
     console.log(empForm.value);
   }
 }
