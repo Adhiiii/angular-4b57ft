@@ -64,15 +64,15 @@
           </label>            
         </div>
       </div>
-      <div class="form-group" [class.has-error]="dept.invalid && dept.touched" [class.has-success]="dept.valid" >
+      <div class="form-group" [class.has-error]="dept.invalid && dept.touched"  [class.has-success]="dept.touched && !dept.errors?.defaultSelected" >
         <label for="department" class="control-label" >Department</label>
-        <select required id="department" name="department" [(ngModel)]="employee.department" class="form-control" #dept="ngModel" (change)='onDepartmentSelected(dept.value)'>
-          <option ngValue='-1'> Select Department</option>
+        <select id="department" appSelectValidator="select" name="department" [(ngModel)]="employee.department" class="form-control" #dept="ngModel">
+          <option ngValue='select'> Select Department</option>
           <option *ngFor="let dept of departments" [value]="dept.id">
             {{dept.name}}
           </option>
         </select>
-        <span class="help-block" *ngIf="dept.invalid && dept.touched">
+        <span class="help-block" *ngIf="dept.errors?.defaultSelected && dept.touched">
           Select Department {{deptChange}}
         </span>
       </div>
