@@ -9,21 +9,21 @@
       <div class="form-group" [class.has-error]="name.invalid && name.touched" [class.has-success]="name.valid" >
         <label for="name" class="control-label" >Full Name</label>
         <input required minlength="4" id="name" name="name" [(ngModel)]="employee.name" type="text" class="form-control" #name="ngModel">
-        <span class="help-block" *ngIf="name.invalid && name.touched || name.invalid &&name.errors.minlength">
+        <span class="help-block" *ngIf="name.invalid && name.touched || name.invalid &&name.errors?.minlength">
           {{name.errors.minlength? "Minimum 4 Characters":"Full Name"}} is Required
         </span>
       </div>
-      <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid && email.errors?.required">
+      <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid && !email.errors?.required">
         <label for="email" class="control-label" >Email</label>
         <input [required]="contactPreference.value=='email'"  email id="email" name="email" [(ngModel)]="employee.email" type="text" class="form-control" #email="ngModel">
         <span class="help-block" *ngIf="email.errors?.required && email.touched || email.errors?.email && email.touched">
           Email is {{email.errors.email? "Invalid":"Required"}}
         </span>      
       </div>
-      <div class="form-group" [class.has-error]="phoneNumber.invalid && phoneNumber.touched" [class.has-success]="phoneNumber.valid" >
+      <div class="form-group" [class.has-error]="phoneNumber.invalid && phoneNumber.touched" [class.has-success]="phoneNumber.valid && phoneNumber.errors?.required">
         <label for="phoneNumber" class="control-label">Phone Number</label>
         <input minlength="10" [required]="contactPreference.value=='phoneNumber'" id="phoneNumber" name="phoneNumber" [(ngModel)]="employee.phoneNumber" type="text" class="form-control" #phoneNumber="ngModel">
-        <span class="help-block" *ngIf="phoneNumber.invalid && phoneNumber.touched || phoneNumber.invalid && phoneNumber.errors.minlength">
+        <span class="help-block" *ngIf="phoneNumber.invalid && phoneNumber.touched || phoneNumber.touched && phoneNumber.errors?.minlength">
           {{phone.errors.minlength? "Minimum 10 digits":"Phone Number"}} is Required
         </span>
       </div>
