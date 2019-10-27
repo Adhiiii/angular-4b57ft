@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ConfirmEqualValidatorDirective } from './shared/select-required-validator.directive';
-import { SelectRequiredValidatorDirective } from './shared/confirm-equal-validator.directive';
+import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
+import { SelectRequiredValidatorDirective } from './shared/select-required-validator.directive';
 import { ListEmployeesComponent } from './employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employee.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
@@ -19,7 +19,13 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, RouterModule.forRoot(appRoutes), BsDatepickerModule.forRoot(), BrowserAnimationsModule ],
-  declarations: [ AppComponent, ListEmployeesComponent, CreateEmployeesComponent, SelectRequiredValidatorDirective, ConfirmEqualValidatorDirective ],
+  declarations: [
+    AppComponent, 
+    ListEmployeesComponent, 
+    CreateEmployeesComponent, 
+    SelectRequiredValidatorDirective,
+    ConfirmEqualValidatorDirective 
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
