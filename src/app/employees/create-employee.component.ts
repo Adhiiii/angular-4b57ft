@@ -14,7 +14,7 @@ export class CreateEmployeesComponent implements OnInit {
     id: null,
     name: null,
     gender: "male",
-    contactPreference: "email",
+    contactPreference: null,
     phoneNumber: null,
     email: null,
     dateOfBirth: null,
