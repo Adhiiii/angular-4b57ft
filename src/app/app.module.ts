@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
 import { SelectRequiredValidatorDirective } from './shared/select-required-validator.directive';
+import { HomeComponent } from './Home/home.component';
 import { ListEmployeesComponent } from './employees/list-employees.component';
 import { CreateEmployeesComponent } from './employees/create-employee.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
@@ -14,13 +15,15 @@ import { AppComponent } from './app.component';
 const appRoutes: Routes = [
   {path: 'list', component: ListEmployeesComponent },
   {path: 'create', component: CreateEmployeesComponent },
-  {path: '', redirectTo: '/list', pathMatch: 'full' }
+  {path: 'home', component: HomeComponent },
+  {path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, RouterModule.forRoot(appRoutes), BsDatepickerModule.forRoot(), BrowserAnimationsModule ],
   declarations: [
-    AppComponent, 
+    AppComponent,
+    HomeComponent, 
     ListEmployeesComponent, 
     CreateEmployeesComponent, 
     SelectRequiredValidatorDirective,

@@ -1,8 +1,9 @@
-p {
-  font-family: Lato;
+a {
+  color: black;
 }
-
-#navBar{
-margin: 0 79% 0 0;
-background-color: #339966;
+a:hover{
+    background-color:yellow;
+}
+a:active{
+    background-color:green;
 }
