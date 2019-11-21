@@ -1,11 +1,12 @@
 a {
   color: black;
+  
 }
 a:hover{
-    background-color:yellow;
+    background-color:rgb(104, 104, 104);
 }
 a:active{
-    background-color:green;
+    background-color:rgb(134, 134, 134);
 }
 p {
   font-family: Lato;
